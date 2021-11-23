@@ -1,4 +1,4 @@
-module.exports = function(pool) {
+module.exports = function avoShopper(pool) {
 
 	async function createShop(shopName) {
 		const result = await pool.query(`insert into shop (name) values ($1) returning id`, [shopName]);

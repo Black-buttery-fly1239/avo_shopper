@@ -1,0 +1,36 @@
+
+<h2>Shop List</h2>
+
+
+
+<form action="/shops/shopList" method="post">
+
+    <div class="m1">
+        <label for="qty" class="w-7">shops</label>
+        <select name="shop_id" class="mt-1 p-1" id="">
+            <option value="">Select Shop</option>
+
+            {{#each shops}}
+            <option value="{{id}}">{{name}}</option>
+            {{/each}}
+
+        </select>
+    </div><br>
+
+    <div class="m1">
+        <label for="basket_name">price</label>
+        <input class="m-1 p-1" type="number" name="basket_name" id="">
+    </div><br>
+
+    <div class="m1">
+        <label for="qty" class="w-7">Quantity</label>
+        <input type="number" name="qty" class="w-3 mt-1 p-1">
+    </div>
+
+<br>
+
+    <div class="m1">
+        <input class="m-1 p-1" type="submit">
+    </div>
+
+</form>

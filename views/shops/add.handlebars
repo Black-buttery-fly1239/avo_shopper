@@ -1,0 +1,32 @@
+<h2>Add New Avo</h2>
+
+<form action="/basket/add" method="post">
+
+
+    <div class="m1">
+        <label for="basket_name" class="w-7">shop Name</label>
+        <strong>{{shops.name}}</strong>
+    </div>
+
+    <div class="m1">
+        <label for="basket_name">Avo name</label>
+        <input class="m-1 p-1" type="text" name="basket_name" id="">
+    </div>
+
+
+    <table>
+        <tr>
+            <th>Shop name</th>
+            <th>Qty</th>
+            <th>Total cost</th>
+        </tr>
+        {{#each }}
+        <tr>
+            <td>{{Shop_name}}</td>
+            <td>{{qty}}</td>
+            <td>{{price}}</td>
+        </tr>
+        {{/each}}
+    </table>
+
+</form>
