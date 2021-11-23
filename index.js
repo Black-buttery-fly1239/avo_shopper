@@ -62,7 +62,25 @@ app.post('/shops/shopList', async function (req, res) {
 	res.redirect('/shops/shopList')
 });
 
+app.get('/recommendation', async function (req, res) {
 
+	const deals = await avoShopper.recommendDeals()
+	res.render('recomedation', {
+		deals
+	});
+});
+
+app.post('/recommendation', async function (req, res) {
+	try {
+		await avoShopper.recommendDeals();
+	} catch (err) {
+		console.log(err)
+	}
+
+
+
+	res.redirect('/recomedation')
+});
 
 // start  the server and start listening for HTTP request on the PORT number specified...
 const PORT =  process.env.PORT || 3019;
