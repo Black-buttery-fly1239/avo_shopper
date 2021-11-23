@@ -5,9 +5,9 @@
 
 <form action="/shops/shopList" method="post">
 
-    <div class="m1">
+    <div class="shopList">
         <label for="qty" class="w-7">shops</label>
-        <select name="shop_id" class="mt-1 p-1" id="">
+        <select name="shop_id" class="theshop" id="">
             <option value="">Select Shop</option>
 
             {{#each shops}}
@@ -17,20 +17,20 @@
         </select>
     </div><br>
 
-    <div class="m1">
-        <label for="basket_name">price</label>
-        <input class="m-1 p-1" type="number" name="basket_name" id="">
+    <div class="price">
+        <label for="shop_name">price</label>
+        <input class="shop" type="number" name="basket_name" id="">
     </div><br>
 
-    <div class="m1">
+    <div class="qty">
         <label for="qty" class="w-7">Quantity</label>
-        <input type="number" name="qty" class="w-3 mt-1 p-1">
+        <input type="number" name="qty" class="num">
     </div>
 
 <br>
 
-    <div class="m1">
-        <input class="m-1 p-1" type="submit">
+    <div class="button">
+        <input class="theButton" type="submit">
     </div>
 
 </form>
